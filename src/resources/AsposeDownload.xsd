@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="ProductRelease">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="FileName" type="xsd:string" />
+        <xsd:element name="VersionNumber" type="xsd:string" />
+        <xsd:element name="ChangeLog" type="xsd:string" />
+        <xsd:element name="DownloadLink" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xs:schema>
