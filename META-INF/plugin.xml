@@ -1,0 +1,51 @@
+<idea-plugin version="2">
+  <id>com.aspose.intellijplugin.id</id>
+  <name>Aspose Project Wizard</name>
+  <version>1.0</version>
+  <vendor email="marketplace@aspose.com" url="http://www.aspose.com">Aspose</vendor>
+
+  <description><![CDATA[
+     <b>Aspose Application</b> creates a new IntelliJ project by downloading and referencing libraries of <b>Aspose Java APIs</b>.
+        <br/><br/>
+        Aspose Project Wizard allows you to select API(s) from Aspose Java product lines like Aspose.Cells for Java and Aspose.Words for Java etc.<br/><br/>
+        Once specific API is selected, its reference is automatically downloaded from Aspose servers and referenced in classpath of the project.<br/><br/>
+        Once project is created, user can then add Aspose samples using Aspose Example.
+        Available samples are displayed in tree format from where user can select one.
+        Selected sample will be added to current project including source files and required data files.<br/><br/>
+        New created project is ready to debug/evaluate, all references are automatically added.
+        <br/><br/>
+        With this plugin, you never need to check for new releases of Aspose APIs. Whenever a new release is published, you will be notified while creating new project and you can also check release notes to save your time.
+    ]]></description>
+
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <moduleBuilder builderClass="com.aspose.wizards.AsposeModuleBuilder"/>
+    </extensions>
+
+
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+
+
+
+  </actions>
+
+</idea-plugin>
