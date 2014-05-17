@@ -75,6 +75,13 @@ public class AsposePanelVisualComponent extends JPanel {
         validateDialog();
     }
 
+    private void jLabel1ComponentResized(java.awt.event.ComponentEvent evt) {
+        int labelwidth = jLabel5.getWidth();
+        int labelheight = jLabel5.getHeight();
+        Image img = icon.getImage();
+        jLabel5.setIcon( new ImageIcon(img.getScaledInstance(labelwidth,labelheight ,Image.SCALE_FAST)));
+    }
+
     private void initComponents() {
 
         ResourceBundle bundle = ResourceBundle.getBundle("Bundle");
@@ -108,20 +115,27 @@ public class AsposePanelVisualComponent extends JPanel {
             jPanel1.setForeground(Color.white);
 
             //---- jLabel5 ----
-            jLabel5.setIcon(IconLoader.getIcon("/resources/long_bannerIntelliJ.png", AsposePanelVisualComponent.class));
+           // jLabel5.setIcon(IconLoader.getIcon("/resources/long_bannerIntelliJ.png", AsposePanelVisualComponent.class));
             jLabel5.setText(bundle.getString("AsposePanelVisualComponent.jLabel5.text"));
-
+            jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+            jLabel5.setIcon(icon); // NOI18N
+            jLabel5.setDoubleBuffered(true);
+            jLabel5.setOpaque(true);
+            jLabel5.addComponentListener(new java.awt.event.ComponentAdapter() {
+                public void componentResized(java.awt.event.ComponentEvent evt) {
+                    jLabel1ComponentResized(evt);
+                }
+            });
             GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
             jPanel1.setLayout(jPanel1Layout);
             jPanel1Layout.setHorizontalGroup(
-                jPanel1Layout.createParallelGroup()
-                    .addComponent(jLabel5)
-            );
+                    jPanel1Layout.createParallelGroup()
+                            .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 390, Short.MAX_VALUE));
             jPanel1Layout.setVerticalGroup(
-                jPanel1Layout.createParallelGroup()
-                    .addGroup(GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    jPanel1Layout.createParallelGroup()
+                            .addGroup(GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel5)
+                                    .addGap(0, 0, Short.MAX_VALUE))
             );
         }
 
@@ -301,6 +315,7 @@ public class AsposePanelVisualComponent extends JPanel {
         jLabelMessage.setToolTipText(bundle.getString("AsposePanelVisualComponent.jLabelMessage.toolTipText"));
 
         GroupLayout layout = new GroupLayout(this);
+
         setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup()
@@ -316,8 +331,8 @@ public class AsposePanelVisualComponent extends JPanel {
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jPanel4, GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)))
-                                .addComponent(jPanel2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel2, 0, 0, 0))
+                        .addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup()
@@ -356,7 +371,7 @@ public class AsposePanelVisualComponent extends JPanel {
     private JPanel jPanel4;
     private JLabel jLabelCommonUses;
     private JLabel jLabelMessage;
-
+    private ImageIcon icon = new javax.swing.ImageIcon(getClass().getResource("/resources/long_bannerIntelliJ.png"));
 
     //=========================================================================
     public void clearMessage()

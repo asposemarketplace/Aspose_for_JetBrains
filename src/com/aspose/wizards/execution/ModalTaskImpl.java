@@ -1,6 +1,7 @@
-package com.aspose.utils;
+package com.aspose.wizards.execution;
 
 
+import com.aspose.utils.AsposeComponentsManager;
 import com.aspose.wizards.AsposeModuleWizardStep;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.Task;

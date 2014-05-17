@@ -3,7 +3,7 @@ package com.aspose.wizards;
 
 import com.aspose.utils.AsposeConstants;
 import com.aspose.utils.AsposeJavaComponents;
-import com.aspose.utils.ModalTaskImpl;
+import com.aspose.wizards.execution.ModalTaskImpl;
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.ide.util.projectWizard.WizardContext;
 import com.intellij.ide.wizard.CommitStepException;
@@ -14,7 +14,6 @@ import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.IconLoader;
-import com.intellij.openapi.wm.WindowManager;
 import com.intellij.ui.*;
 import com.intellij.util.ui.AsyncProcessIcon;
 import org.jetbrains.annotations.NotNull;
@@ -37,19 +36,14 @@ import java.net.URL;
  */
 
 public class AsposeModuleWizardStep extends ModuleWizardStep {
-  private static final Icon WIZARD_ICON = IconLoader.getIcon("/resources/long_banner.png");
+  private static final Icon WIZARD_ICON = IconLoader.getIcon("/resources/long_bannerIntelliJ.png");
 
 
   private Project myProjectOrNull;
   private final AsposeModuleBuilder myBuilder;
   private final WizardContext myContext;
-  Timer timer;
   private JComponent myMainPanel ;
-  final int interval = 100;
-  int i;
 
-
-  private Object myCurrentUpdaterMarker;
   private final AsyncProcessIcon myLoadingIcon = new AsyncProcessIcon.Big(getClass() + ".loading");
 
 

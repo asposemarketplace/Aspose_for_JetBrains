@@ -1,4 +1,4 @@
-package com.aspose.utils;
+package com.aspose.wizards.execution;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.command.CommandProcessor;
 import com.intellij.openapi.project.Project;

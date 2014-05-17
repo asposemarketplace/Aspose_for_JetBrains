@@ -30,8 +30,6 @@ import java.net.URLConnection;
 import java.net.UnknownHostException;
 import com.aspose.wizards.AsposeModuleWizardStep;
 import com.intellij.openapi.progress.ProgressIndicator;
-import com.sun.jna.platform.FileUtils;
-import org.apache.velocity.texen.util.FileUtil;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.ByteArrayOutputStream;
