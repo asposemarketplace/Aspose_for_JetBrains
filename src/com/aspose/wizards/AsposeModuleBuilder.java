@@ -1,3 +1,22 @@
+
+/**
+* Copyright (c) Aspose 2002-2014. All Rights Reserved.
+*
+* LICENSE: This program is free software; you can redistribute it 
+* and/or modify it under the terms of the GNU General Public License
+* as published by the Free Software Foundation; either version 3
+* of the License, or (at your option) any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, 
+* see http://opensource.org/licenses/gpl-3.0.html
+*
+* @author Adeel Ilyas <adeel.ilyas@aspose.com>
+*  
+*/
 package com.aspose.wizards;
 
 
@@ -25,9 +44,6 @@ package com.aspose.wizards;
     import java.io.IOException;
     import java.util.Collection;
     import java.util.Iterator;
-/**
- * @author Adeel Ilyas
- */
 
 
 public class AsposeModuleBuilder extends JavaModuleBuilder {
@@ -46,13 +62,7 @@ public class AsposeModuleBuilder extends JavaModuleBuilder {
     @Override
     public String getDescription() {
         return "<B>Aspose Application</B> creates a new IntelliJ project by downloading and referencing libraries of <B>Aspose" +
-                " Java API.</B>  Aspose Project Wizard allows you to select components from Aspose Java product lines" +
-                " like Aspose.Cells for Java and Aspose.Words for Java etc.  Once specific API is selected, its" +
-                " reference is automatically downloaded from Aspose servers and referenced in classpath of the project." +
-                " With this plugin, you never need to check for new releases of Aspose " +
-                "APIs. Whenever a new release is published, you will be notified while creating new project.";
-
-
+                " Java API.</B>  Aspose Project Wizard allows you to select components from Aspose Java product lines";
 
     }
 
@@ -107,8 +117,8 @@ public class AsposeModuleBuilder extends JavaModuleBuilder {
                     }
                 }
                 String[] children = new File(path + File.separator).list();
-                for (int i = 0; i < children.length; i++) {
-                    String jarPath = "jar://" + path + File.separator + children[i] + "!/";
+                for (String _child : children) {
+                    String jarPath = "jar://" + path + File.separator + _child + "!/";
 
                     Library.ModifiableModel model = library.getModifiableModel();
 
