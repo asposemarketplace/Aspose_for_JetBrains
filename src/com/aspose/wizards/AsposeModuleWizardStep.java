@@ -63,7 +63,6 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
   private final WizardContext myContext;
   private JComponent myMainPanel ;
 
-  private final AsyncProcessIcon myLoadingIcon = new AsyncProcessIcon.Big(getClass() + ".loading");
 
 
   public AsposeModuleWizardStep(@Nullable Project project, AsposeModuleBuilder builder, WizardContext context) {
@@ -98,7 +97,6 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
 
   @Override
   public void disposeUIResources() {
-    myLoadingIcon.dispose();
     super.disposeUIResources();
   }
 

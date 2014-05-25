@@ -49,7 +49,6 @@ public class AsposePanelVisualComponent extends JPanel {
         this.panel = panel;
     }
     private void jCheckBoxSelectAllActionPerformed(ActionEvent e) {
-        // TODO add your code here
         setSelectionOfComponents(jCheckBoxSelectAll.isSelected());
         validateDialog();
     }
@@ -126,7 +125,6 @@ public class AsposePanelVisualComponent extends JPanel {
             jPanel1.setForeground(Color.white);
 
             //---- jLabel5 ----
-           // jLabel5.setIcon(IconLoader.getIcon("/resources/long_bannerIntelliJ.png", AsposePanelVisualComponent.class));
             jLabel5.setText(bundle.getString("AsposePanelVisualComponent.jLabel5.text"));
             jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             jLabel5.setIcon(icon); // NOI18N
@@ -303,7 +301,7 @@ public class AsposePanelVisualComponent extends JPanel {
             jLabelCommonUses.setText(bundle.getString("AsposePanelVisualComponent.jLabelCommonUses.text"));
             Font labelFont = jLabelCommonUses.getFont();
 
-            jLabelCommonUses.setFont(new Font(labelFont.getName(), Font.PLAIN, 12));
+            jLabelCommonUses.setFont(new Font(labelFont.getName(), Font.PLAIN, 14));
 
             GroupLayout jPanel4Layout = new GroupLayout(jPanel4);
             jPanel4.setLayout(jPanel4Layout);
