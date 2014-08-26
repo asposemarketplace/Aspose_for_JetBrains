@@ -34,7 +34,6 @@ import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.ui.*;
-import com.intellij.util.ui.AsyncProcessIcon;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import com.aspose.utils.AsposeComponentsManager;
@@ -50,9 +49,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 
-/**
- * @author Adeel Ilyas
- */
 
 public class AsposeModuleWizardStep extends ModuleWizardStep {
   private static final Icon WIZARD_ICON = IconLoader.getIcon("/resources/long_bannerIntelliJ.png");
@@ -106,43 +102,43 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
     {
         AsposeConstants.println("2. ================ updateComponentsSelectionList ================");
 
-        if (((AsposePanelVisualComponent) getComponent()).getjCheckBoxAsposeCells().isSelected())
+        if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeCells().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_CELLS).set_selected(true);
         }
 
-        if (((AsposePanelVisualComponent) getComponent()).getjCheckBoxAsposeWords().isSelected())
+        if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeWords().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_WORDS).set_selected(true);
         }
 
-        if (((AsposePanelVisualComponent) getComponent()).getjCheckBoxAsposePdf().isSelected())
+        if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposePdf().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_PDF).set_selected(true);
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_PDF_KIT).set_selected(true);
         }
 
-        if (((AsposePanelVisualComponent) getComponent()).getjCheckBoxAsposeSlides().isSelected())
+        if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeSlides().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_SLIDES).set_selected(true);
         }
 
-        if (((AsposePanelVisualComponent) getComponent()).getjCheckBoxAsposeBarCode().isSelected())
+        if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeBarCode().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_BARCODE).set_selected(true);
         }
 
-        if (((AsposePanelVisualComponent) getComponent()).getjCheckBoxAsposeEmail().isSelected())
+        if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeEmail().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_EMAIL).set_selected(true);
         }
 
-        if (((AsposePanelVisualComponent) getComponent()).getjCheckBoxAsposeOCR().isSelected())
+        if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeOCR().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_OCR).set_selected(true);
         }
 
-        if (((AsposePanelVisualComponent) getComponent()).getjCheckBoxAsposeImaging().isSelected())
+        if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeImaging().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_IMAGING).set_selected(true);
         }
@@ -152,9 +148,8 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
     //=========================================================================
     private boolean downloadComponents()
     {
-
-        final ModalTaskImpl modalTask = new ModalTaskImpl(myBuilder.getMyProject(),this);
-
+        AsposeComponentManagerCallback callback = new AsposeComponentManagerCallback(this);
+        final ModalTaskImpl modalTask = new ModalTaskImpl(myBuilder.getMyProject(), callback,"Downloading Aspose API");
         ApplicationManager.getApplication().invokeAndWait(new Runnable() {
             @Override
             public void run() {
@@ -172,7 +167,7 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
     }
     public void clearMessage()
     {
-        ((AsposePanelVisualComponent) getComponent()).clearMessage();
+        ((AsposeWizardPanel) getComponent()).clearMessage();
     }
 
 
@@ -181,15 +176,15 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
 
        if (myMainPanel == null)
        {
-           myMainPanel = new AsposePanelVisualComponent(this);
+           myMainPanel = new AsposeWizardPanel(this);
        }
     return myMainPanel;
   }
 
   @Override
   public boolean validate() throws ConfigurationException {
-   if (getComponent() instanceof AsposePanelVisualComponent) {
-       AsposePanelVisualComponent _page = (AsposePanelVisualComponent) getComponent();
+   if (getComponent() instanceof AsposeWizardPanel) {
+       AsposeWizardPanel _page = (AsposeWizardPanel) getComponent();
        if (!_page.isComponentSelected())
       throw new ConfigurationException(AsposeConstants.IS_COMPONENT_SELECTED);
     }
@@ -242,7 +237,7 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
        ApplicationManager.getApplication().invokeAndWait(new Runnable() {
             @Override
             public void run() {
-                ((AsposePanelVisualComponent) getComponent()).diplayMessage(msg, important);
+                ((AsposeWizardPanel) getComponent()).diplayMessage(msg, important);
             }
        }, ModalityState.defaultModalityState());
 
@@ -250,7 +245,7 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
     }
     public int showMessage(String title, String message, int buttons, int icon)
     {
-        int result = JOptionPane.showConfirmDialog(((AsposePanelVisualComponent) getComponent()), message, title, buttons, icon);
+        int result = JOptionPane.showConfirmDialog(((AsposeWizardPanel) getComponent()), message, title, buttons, icon);
         return result;
     }
 

@@ -19,7 +19,7 @@
   <id>com.aspose.intellijplugin.id</id>
   <name>Aspose Project Wizard</name>
   <version>1.0</version>
-  <vendor email="marketplace@aspose.com" url="http://www.aspose.com">Aspose</vendor>
+  <vendor email="marketplace@aspose.com" url="http://www.aspose.com">Aspose Pty Ltd.</vendor>
 
   <description><![CDATA[
      <b>Aspose Application</b> creates a new IntelliJ project by downloading and referencing libraries of <b>Aspose Java APIs</b>.
@@ -57,9 +57,10 @@
   </project-components>
 
   <actions>
-
-
-
+      <action id="aspose.example" class="com.aspose.examples.AsposeExampleAction" text="Aspose Example" icon="/resources/asposeSmall.png"
+              description="Aspose Examples allow you to add Aspose samples. Available samples are displayed in tree format from where you can select one. Selected sample will be added to current project including source files and required data files.">
+          <add-to-group group-id="NewGroup" anchor="first"/>
+      </action>
   </actions>
 
 </idea-plugin>

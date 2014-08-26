@@ -20,59 +20,29 @@
 package com.aspose.wizards;
 
 
-import com.aspose.utils.AsposeComponentsManager;
-import com.aspose.utils.AsposeConstants;
-import com.aspose.utils.AsposeJavaComponents;
-import com.aspose.wizards.execution.ModalTaskImpl;
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
-import com.intellij.ide.util.projectWizard.WizardContext;
 import com.intellij.ide.wizard.CommitStepException;
 import com.intellij.openapi.Disposable;
-import com.intellij.openapi.application.ApplicationManager;
-import com.intellij.openapi.application.ModalityState;
-import com.intellij.openapi.options.ConfigurationException;
-import com.intellij.openapi.progress.ProgressIndicator;
-import com.intellij.openapi.progress.ProgressManager;
-import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.IconLoader;
-import com.intellij.ui.ColoredTreeCellRenderer;
-import com.intellij.util.ui.AsyncProcessIcon;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
-import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URL;
 import java.util.ResourceBundle;
-
-import static com.aspose.utils.AsposeComponentsManager.*;
 
 /**
  * @author Adeel Ilyas
  */
 
 public class AsposeIntroWizardStep extends ModuleWizardStep implements Disposable{
-  private static final Icon WIZARD_ICON = IconLoader.getIcon("/resources/long_bannerIntelliJ.png");
 
     @Override
     public void dispose() {
     }
 
-  private final AsposeModuleBuilder myBuilder;
   private JLabel jLabelAsposeIntro;
   private JComponent myMainPanel ;
 
-
-  public AsposeIntroWizardStep(AsposeModuleBuilder builder) {
-    myBuilder = builder;
-
-   }
 
 
   @Override

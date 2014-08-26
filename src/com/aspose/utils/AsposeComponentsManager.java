@@ -255,7 +255,7 @@ public class AsposeComponentsManager {
 
     public static void copyDirectory(String sourceLocation, String targetLocation) throws IOException {
 
-       // GitHelper.checkAndCreateFolder(targetLocation);
+        GitHelper.checkAndCreateFolder(targetLocation);
         copyDirectory(new File(sourceLocation + File.separator), new File(targetLocation + File.separator));
     }
 
@@ -434,7 +434,6 @@ public class AsposeComponentsManager {
         } else {
             dir.mkdir();
         }
-        @SuppressWarnings("rawtypes")
         Enumeration zipFileEntries = zip.entries();
         while (zipFileEntries.hasMoreElements()) {
             ZipEntry entry = (ZipEntry) zipFileEntries.nextElement();

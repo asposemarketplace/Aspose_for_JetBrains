@@ -169,23 +169,24 @@ public class AsposeModuleBuilder extends ModuleBuilder implements SourcePathsBui
                 for (AsposeJavaComponent component : AsposeJavaComponents.list.values()) {
                     if (component.is_selected()) {
                         try {
-                            AsposeComponentsManager.copyDirectory(AsposeComponentsManager.getLibaryDownloadPath() + component.get_name().toLowerCase(), path);
+                            AsposeComponentsManager.copyDirectory(AsposeComponentsManager.getLibaryDownloadPath() + component.get_name().toLowerCase(), path+File.separator+component.get_name());
                         } catch (IOException ex) {
                             ex.printStackTrace();
                         }
+                        String[] children = new File(path +File.separator+component.get_name().toLowerCase()+ File.separator).list();
+                        for (String _child : children) {
+                            String jarPath = "jar://" + path +File.separator+component.get_name()+ File.separator + _child + "!/";
+
+                            Library.ModifiableModel model = library.getModifiableModel();
+
+                            model.addRoot(jarPath, OrderRootType.CLASSES);
+
+                            model.commit();
+
+                        }
                     }
                 }
-                String[] children = new File(path + File.separator).list();
-                for (String _child : children) {
-                    String jarPath = "jar://" + path + File.separator + _child + "!/";
 
-                    Library.ModifiableModel model = library.getModifiableModel();
-
-                    model.addRoot(jarPath, OrderRootType.CLASSES);
-
-                    model.commit();
-
-                }
 
 
                 Collection<Module> modules = ModuleUtil.getModulesOfType(getMyProject(), StdModuleTypes.JAVA);
@@ -223,7 +224,7 @@ public class AsposeModuleBuilder extends ModuleBuilder implements SourcePathsBui
         }
     @Nullable
     public ModuleWizardStep getCustomOptionsStep(WizardContext context, Disposable parentDisposable) {
-        AsposeIntroWizardStep step = new AsposeIntroWizardStep(this);
+        AsposeIntroWizardStep step = new AsposeIntroWizardStep();
         Disposer.register(parentDisposable,step);
         return step;
     }
