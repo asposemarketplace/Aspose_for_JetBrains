@@ -24,8 +24,10 @@
   <description><![CDATA[
      <b>Aspose Application</b> creates a new IntelliJ project by downloading and referencing libraries of <b>Aspose Java APIs</b>.
         <br/><br/>
-        Aspose Project Wizard allows you to select API(s) from Aspose Java product lines like Aspose.Cells for Java and Aspose.Words for Java etc.<br/><br/>
+        <b>Aspose Project Wizard</b> allows you to select API(s) from Aspose Java product lines like Aspose.Cells for Java and Aspose.Words for Java etc.<br/><br/>
         Once specific API is selected, its reference is automatically downloaded from Aspose servers and referenced in classpath of the project.<br/><br/>
+        Once project is created, user can then add Aspose samples using <b>Aspose Example</b>.<br/><br/>
+        Available samples are displayed in tree format from where user can select one, selected sample will be added to current project including source files and required data files.<br/><br/>
         New created project is ready to debug/evaluate, all references are automatically added.
         <br/><br/>
         With this plugin, you never need to check for new releases of Aspose APIs. Whenever a new release is published, you will be notified while creating new project and you can also check release notes to save your time.
