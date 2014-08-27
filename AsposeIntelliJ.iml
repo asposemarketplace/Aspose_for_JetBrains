@@ -10,6 +10,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="org.eclipse.jgit-3.4.1.201406201815-r" level="project" />
     <orderEntry type="library" name="org.eclipse.jgit-3.4.1.201406201815-r (2)" level="project" />
+    <orderEntry type="library" name="org.eclipse.jgit-3.4.1.201406201815-r" level="project" />
   </component>
 </module>
 

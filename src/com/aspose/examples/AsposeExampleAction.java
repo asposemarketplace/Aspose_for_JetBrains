@@ -18,8 +18,6 @@ public class AsposeExampleAction extends AnAction implements DumbAware {
 
         final AsposeExampleDialog dialog = new AsposeExampleDialog("Aspose Example","Aspose Examples allow you to add Aspose samples. Available samples are displayed in tree format from where you can select one. Selected sample will be added to current project including source files and required data files.",project);
         dialog.show();
-        if (!dialog.isOK()) return;
-        project.getProjectFile().getFileSystem().refresh(false);
     }
 
 
