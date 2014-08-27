@@ -16,7 +16,7 @@ With this plugin, you never need to check for new releases of Aspose components.
 
 # How to use Aspose Project Wizard on JetBrains ...
 
-[Continue reading ?](https://bitbucket.org/asposemarketplace/aspose-for-jetbrains/wiki/Aspose%20Project%20Wizard)
+[Continue reading ?](https://github.com/asposemarketplace/Aspose_for_JetBrains/wiki/Aspose-Project-Wizard)
 
 ## Latest Release - Ver 1.1
 
@@ -32,7 +32,7 @@ Latest Release v1.1 of Aspose Java plugin for JetBrains IDE, provides the suppor
 
 Finally, the downloaded / created example is ready to be evaluated / enhanced as per your usage requirement.
 
-For the complete detail please check the following step by step wiki documentation, [click here](https://bitbucket.org/asposemarketplace/aspose-for-jetbrains/wiki/Aspose%20Example "AsposeExample")
+For the complete detail please check the following step by step wiki documentation, [click here](https://github.com/asposemarketplace/Aspose_for_JetBrains/wiki/Aspose-Example "AsposeExample")
 
 # How to configure source code of Aspose Project Wizard
 
