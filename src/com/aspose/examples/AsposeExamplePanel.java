@@ -375,9 +375,7 @@ public final class AsposeExamplePanel extends JPanel
 
         else
         {
-            int result = showMessage("Examples download required", component.get_name() + " - " + AsposeConstants.EXAMPLES_DOWNLOAD_REQUIRED, JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
-            if (result == JOptionPane.YES_OPTION)
-            {
+
                 if (AsposeComponentsManager.isIneternetConnected())
                 {
                     GitHelper.updateRepository(component);
@@ -390,8 +388,7 @@ public final class AsposeExamplePanel extends JPanel
                 {
                     showMessage(AsposeConstants.INTERNET_CONNECTION_REQUIRED_MESSAGE_TITLE, component.get_name() + " - " + AsposeConstants.EXAMPLES_INTERNET_CONNECTION_REQUIRED_MESSAGE, JOptionPane.OK_OPTION, JOptionPane.INFORMATION_MESSAGE);
                 }
-            }
-        }
+             }
     }
 
     //====================================================================
