@@ -25,10 +25,7 @@ public class AsposeJavaComponents {
 
     public static Map<String, AsposeJavaComponent> list = new HashMap<String, AsposeJavaComponent>();
 
-    public AsposeJavaComponents() {
-        list.clear();
-       
-        {
+       static {
             //ASPOSE_CELLS
             AsposeJavaComponent asposeCells = new AsposeJavaComponent();
             asposeCells.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.cells.aspx");
@@ -106,6 +103,6 @@ public class AsposeJavaComponents {
             asposeImaging.set_remoteExamplesRepository("https://github.com/asposeimaging/Aspose_Imaging_Java.git");
             list.put(AsposeConstants.ASPOSE_IMAGING, asposeImaging);
 
-        }
+
     }
 }
