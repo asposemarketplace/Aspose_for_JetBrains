@@ -42,3 +42,25 @@ Below simple steps will smoothly lead to successful configuration of Aspose Proj
 2.  Choose File -> Open Project
 3.  Browse to the project source that is just downloaded in above step and open the project.
 4.  Aspose for IntelliJ plugin code is now ready to enhance.
+### Important Links
+
+*   [Aspose project Wizard for JetBrains](http://goo.gl/1DzKBe "Aspose project Wizard 
+
+for JetBrains")
+
+*   [Aspose APIs Examples
+    Integration with JetBrains](http://goo.gl/4D578h "Aspose Java Example") (new 
+
+feature!)
+
+*   [Aspose Java
+    Components](http://www.aspose.com/java/total-component.aspx)
+
+*   [Download Aspose IntelliJ IDEA
+    Plugin for Manual Installation](http://plugins.jetbrains.com/plugin/7461)
+
+*   [Video tutorial showing how to create an Aspose
+    for Java API project in IntelliJ IDEA](http://youtu.be/tQyk10MXbGw)
+
+*   [Video tutorial showing how to create an Aspose for
+    Java API project in IntelliJ IDEA](http://goo.gl/u0mfZu)
