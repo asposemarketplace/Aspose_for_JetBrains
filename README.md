@@ -31,7 +31,7 @@ New! Aspose Java Product support is Added, in Aspose Project Wizard/Aspose API E
 
 **New Features**
 
-Latest Release v1.1 of Aspose Java plugin for JetBrains IDE, provides the support of getting Aspose Java API samples through **Aspose Example** option in New menu as following:
+Release v1.1 of Aspose Java plugin for JetBrains IDE, provides the support of getting Aspose Java API samples through **Aspose Example** option in New menu as following:
 
 1.  First Create Java Project by using plugin provided Aspose Project Wizard
 2.  **Right Click** on Project or Select **File** Menu
