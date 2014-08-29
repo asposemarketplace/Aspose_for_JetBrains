@@ -128,6 +128,11 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_BARCODE).set_selected(true);
         }
 
+        if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeTasks().isSelected())
+        {
+            AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_TASKS).set_selected(true);
+        }
+
         if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeEmail().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_EMAIL).set_selected(true);
@@ -141,6 +146,11 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
         if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeImaging().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_IMAGING).set_selected(true);
+        }
+
+        if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeDiagram().isSelected())
+        {
+            AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_DIAGRAM).set_selected(true);
         }
 
     }
@@ -194,31 +204,17 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
 
   @Override
   public void updateStep() {
-
-
-
-
   }
-
-
-
-
-
 
   @Override
   public void updateDataModel() {
    myContext.setProjectBuilder(myBuilder);
 
   }
-
-
-
   @Override
   public Icon getIcon() {
     return WIZARD_ICON;
   }
-
-
 
     private static class MyRenderer extends ColoredTreeCellRenderer {
     public void customizeCellRenderer(JTree tree,
@@ -232,17 +228,7 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
 
     }
   }
-    private void diplayMessage(final String msg, final boolean important)
-    {
-       ApplicationManager.getApplication().invokeAndWait(new Runnable() {
-            @Override
-            public void run() {
-                ((AsposeWizardPanel) getComponent()).diplayMessage(msg, important);
-            }
-       }, ModalityState.defaultModalityState());
 
-
-    }
     public int showMessage(String title, String message, int buttons, int icon)
     {
         int result = JOptionPane.showConfirmDialog(((AsposeWizardPanel) getComponent()), message, title, buttons, icon);
@@ -259,10 +245,7 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
         String localPath = getLibaryDownloadPath();
         try
         {
-            //diplayMessage("Downloading " + name, true);
             progressIndicator.setText("Downloading " + name);
-           // StatusDisplayer.getDefault().setStatusText("Downloading " + name);
-
 
             URL url = new URL(urlStr);
             input = url.openStream();

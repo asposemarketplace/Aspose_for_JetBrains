@@ -23,7 +23,6 @@ package com.aspose.wizards;
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.ide.wizard.CommitStepException;
 import com.intellij.openapi.Disposable;
-import com.intellij.openapi.util.IconLoader;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
@@ -43,24 +42,15 @@ public class AsposeIntroWizardStep extends ModuleWizardStep implements Disposabl
   private JLabel jLabelAsposeIntro;
   private JComponent myMainPanel ;
 
-
-
   @Override
   public JComponent getPreferredFocusedComponent() {
     return myMainPanel;
   }
 
-
-
   @Override
   public void onWizardFinished() throws CommitStepException {
 
   }
-
-
-
-
-
    @Override
   public JComponent getComponent() {
 
@@ -69,12 +59,12 @@ public class AsposeIntroWizardStep extends ModuleWizardStep implements Disposabl
            myMainPanel = new JPanel();
            {
                ResourceBundle bundle = ResourceBundle.getBundle("Bundle");
-               myMainPanel.setBorder(new TitledBorder(bundle.getString("AsposePanelVisualComponent.myMainPanel.border.title")));
+               myMainPanel.setBorder(new TitledBorder(bundle.getString("AsposeWizardPanel.myMainPanel.border.title")));
                myMainPanel.setPreferredSize(new Dimension(333, 364));
 
 
                jLabelAsposeIntro = new JLabel();
-               jLabelAsposeIntro.setText(bundle.getString("AsposePanelVisualComponent.myMainPanel.description"));
+               jLabelAsposeIntro.setText(bundle.getString("AsposeWizardPanel.myMainPanel.description"));
                Font labelFont = jLabelAsposeIntro.getFont();
 
                jLabelAsposeIntro.setFont(new Font(labelFont.getName(), Font.PLAIN, 14));
@@ -97,10 +87,6 @@ public class AsposeIntroWizardStep extends ModuleWizardStep implements Disposabl
        }
     return myMainPanel;
   }
-
-
-
-
 
   @Override
   public void updateDataModel() {

@@ -26,7 +26,6 @@ package com.aspose.wizards;
     import com.intellij.openapi.Disposable;
     import com.intellij.openapi.module.*;
 
-    import com.intellij.openapi.options.ConfigurationException;
     import com.intellij.openapi.project.Project;
     import com.intellij.openapi.projectRoots.JavaSdkType;
     import com.intellij.openapi.projectRoots.SdkTypeId;
@@ -67,7 +66,7 @@ public class AsposeModuleBuilder extends ModuleBuilder implements SourcePathsBui
     }
     @Override
     public String getDescription() {
-        return bundle.getString("AsposePanelVisualComponent.myMainPanel.description");
+        return bundle.getString("AsposeWizardPanel.myMainPanel.description");
 
 
 

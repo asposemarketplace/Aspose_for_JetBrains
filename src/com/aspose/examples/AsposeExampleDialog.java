@@ -55,6 +55,7 @@ public class AsposeExampleDialog extends DialogWrapper {
     super.doOKAction();
     createExample();
      project.getProjectFile().getFileSystem().refresh(false);
+      project.getBaseDir().getFileSystem().refresh(false);
   }
 
   @Override

@@ -18,7 +18,7 @@
 <idea-plugin version="2">
   <id>com.aspose.intellijplugin.id</id>
   <name>Aspose Project Wizard</name>
-  <version>1.1</version>
+  <version>1.2</version>
   <vendor email="marketplace@aspose.com" url="http://www.aspose.com">Aspose Pty Ltd.</vendor>
 
   <description><![CDATA[

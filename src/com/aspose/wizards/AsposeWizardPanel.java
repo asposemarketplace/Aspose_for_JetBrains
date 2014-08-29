@@ -21,7 +21,6 @@ package com.aspose.wizards;
 import com.aspose.utils.AsposeConstants;
 import com.aspose.utils.AsposeJavaComponent;
 import com.aspose.utils.AsposeJavaComponents;
-import com.intellij.openapi.util.IconLoader;
 
 
 import java.awt.*;
@@ -73,6 +72,10 @@ public class AsposeWizardPanel extends JPanel {
         validateDialog();
     }
 
+    private void jCheckBoxAsposeTasksActionPerformed(ActionEvent e) {
+        validateDialog();
+    }
+
     private void jCheckBoxAsposeEmailActionPerformed(ActionEvent e) {
         validateDialog();
     }
@@ -82,6 +85,10 @@ public class AsposeWizardPanel extends JPanel {
     }
 
     private void jCheckBoxAsposeImagingActionPerformed(ActionEvent e) {
+        validateDialog();
+    }
+
+    private void jCheckBoxAsposeDiagramActionPerformed(ActionEvent e) {
         validateDialog();
     }
 
@@ -105,9 +112,12 @@ public class AsposeWizardPanel extends JPanel {
         jCheckBoxAsposePdf =    new JCheckBox();
         jCheckBoxAsposeSlides = new JCheckBox();
         jCheckBoxAsposeBarCode = new JCheckBox();
+        jCheckBoxAsposeTasks = new JCheckBox();
         jCheckBoxAsposeEmail = new JCheckBox();
         jCheckBoxAsposeOCR = new JCheckBox();
         jCheckBoxAsposeImaging = new JCheckBox();
+        jCheckBoxAsposeDiagram = new JCheckBox();
+
         jPanel4 = new JPanel();
         jLabelCommonUses = new JLabel();
         jLabelMessage = new JLabel();
@@ -125,7 +135,7 @@ public class AsposeWizardPanel extends JPanel {
             jPanel1.setForeground(Color.white);
 
             //---- jLabel5 ----
-            jLabel5.setText(bundle.getString("AsposePanelVisualComponent.jLabel5.text"));
+            jLabel5.setText(bundle.getString("AsposeWizardPanel.jLabel5.text"));
             jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             jLabel5.setIcon(icon); // NOI18N
             jLabel5.setDoubleBuffered(true);
@@ -165,10 +175,10 @@ public class AsposeWizardPanel extends JPanel {
 
         //======== jPanel6 ========
         {
-            jPanel6.setBorder(new TitledBorder(bundle.getString("AsposePanelVisualComponent.jPanel6.border.title")));
+            jPanel6.setBorder(new TitledBorder(bundle.getString("AsposeWizardPanel.jPanel6.border.title")));
 
             //---- jCheckBoxSelectAll ----
-            jCheckBoxSelectAll.setText(bundle.getString("AsposePanelVisualComponent.jCheckBoxSelectAll.text"));
+            jCheckBoxSelectAll.setText(bundle.getString("AsposeWizardPanel.jCheckBoxSelectAll.text"));
             jCheckBoxSelectAll.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -177,7 +187,7 @@ public class AsposeWizardPanel extends JPanel {
             });
 
             //---- jCheckBoxAsposeCells ----
-            jCheckBoxAsposeCells.setText(bundle.getString("AsposePanelVisualComponent.jCheckBoxAsposeCells.text"));
+            jCheckBoxAsposeCells.setText(bundle.getString("AsposeWizardPanel.jCheckBoxAsposeCells.text"));
             jCheckBoxAsposeCells.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -186,7 +196,7 @@ public class AsposeWizardPanel extends JPanel {
             });
 
             //---- jCheckBoxAsposeWords ----
-            jCheckBoxAsposeWords.setText(bundle.getString("AsposePanelVisualComponent.jCheckBoxAsposeWords.text"));
+            jCheckBoxAsposeWords.setText(bundle.getString("AsposeWizardPanel.jCheckBoxAsposeWords.text"));
             jCheckBoxAsposeWords.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -195,7 +205,7 @@ public class AsposeWizardPanel extends JPanel {
             });
 
             //---- jCheckBoxAsposePdf ----
-            jCheckBoxAsposePdf.setText(bundle.getString("AsposePanelVisualComponent.jCheckBoxAsposePdf.text"));
+            jCheckBoxAsposePdf.setText(bundle.getString("AsposeWizardPanel.jCheckBoxAsposePdf.text"));
             jCheckBoxAsposePdf.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -204,7 +214,7 @@ public class AsposeWizardPanel extends JPanel {
             });
 
             //---- jCheckBoxAsposeSlides ----
-            jCheckBoxAsposeSlides.setText(bundle.getString("AsposePanelVisualComponent.jCheckBoxAsposeSlides.text"));
+            jCheckBoxAsposeSlides.setText(bundle.getString("AsposeWizardPanel.jCheckBoxAsposeSlides.text"));
             jCheckBoxAsposeSlides.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -212,8 +222,17 @@ public class AsposeWizardPanel extends JPanel {
                 }
             });
 
+            //---- jCheckBoxAsposeTasks ----
+            jCheckBoxAsposeTasks.setText(bundle.getString("AsposeWizardPanel.jCheckBoxAsposeTasks.text"));
+            jCheckBoxAsposeTasks.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    jCheckBoxAsposeTasksActionPerformed(e);
+                }
+            });
+
             //---- jCheckBoxAsposeBarCode ----
-            jCheckBoxAsposeBarCode.setText(bundle.getString("AsposePanelVisualComponent.jCheckBoxAsposeBarCode.text"));
+            jCheckBoxAsposeBarCode.setText(bundle.getString("AsposeWizardPanel.jCheckBoxAsposeBarCode.text"));
             jCheckBoxAsposeBarCode.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -222,7 +241,7 @@ public class AsposeWizardPanel extends JPanel {
             });
 
             //---- jCheckBoxAsposeEmail ----
-            jCheckBoxAsposeEmail.setText(bundle.getString("AsposePanelVisualComponent.jCheckBoxAsposeEmail.text"));
+            jCheckBoxAsposeEmail.setText(bundle.getString("AsposeWizardPanel.jCheckBoxAsposeEmail.text"));
             jCheckBoxAsposeEmail.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -231,7 +250,7 @@ public class AsposeWizardPanel extends JPanel {
             });
 
             //---- jCheckBoxAsposeOCR ----
-            jCheckBoxAsposeOCR.setText(bundle.getString("AsposePanelVisualComponent.jCheckBoxAsposeOCR.text"));
+            jCheckBoxAsposeOCR.setText(bundle.getString("AsposeWizardPanel.jCheckBoxAsposeOCR.text"));
             jCheckBoxAsposeOCR.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -240,11 +259,20 @@ public class AsposeWizardPanel extends JPanel {
             });
 
             //---- jCheckBoxAsposeImaging ----
-            jCheckBoxAsposeImaging.setText(bundle.getString("AsposePanelVisualComponent.jCheckBoxAsposeImaging.text"));
+            jCheckBoxAsposeImaging.setText(bundle.getString("AsposeWizardPanel.jCheckBoxAsposeImaging.text"));
             jCheckBoxAsposeImaging.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     jCheckBoxAsposeImagingActionPerformed(e);
+                }
+            });
+
+            //---- jCheckBoxAsposeDiagram ----
+            jCheckBoxAsposeDiagram.setText(bundle.getString("AsposeWizardPanel.jCheckBoxAsposeDiagram.text"));
+            jCheckBoxAsposeDiagram.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    jCheckBoxAsposeDiagramActionPerformed(e);
                 }
             });
 
@@ -261,9 +289,11 @@ public class AsposeWizardPanel extends JPanel {
                             .addComponent(jCheckBoxAsposePdf)
                             .addComponent(jCheckBoxAsposeSlides)
                             .addComponent(jCheckBoxAsposeBarCode)
+                            .addComponent(jCheckBoxAsposeTasks)
                             .addComponent(jCheckBoxAsposeEmail)
                             .addComponent(jCheckBoxAsposeOCR)
-                            .addComponent(jCheckBoxAsposeImaging))
+                            .addComponent(jCheckBoxAsposeImaging)
+                            .addComponent(jCheckBoxAsposeDiagram))
                         .addContainerGap(8, Short.MAX_VALUE))
             );
             jPanel6Layout.setVerticalGroup(
@@ -282,23 +312,27 @@ public class AsposeWizardPanel extends JPanel {
                         .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jCheckBoxAsposeBarCode)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBoxAsposeTasks)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jCheckBoxAsposeEmail)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jCheckBoxAsposeOCR)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jCheckBoxAsposeImaging)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBoxAsposeDiagram)
                         .addContainerGap(22, Short.MAX_VALUE))
             );
         }
 
         //======== jPanel4 ========
         {
-            jPanel4.setBorder(new TitledBorder(bundle.getString("AsposePanelVisualComponent.jPanel4.border.title")));
-            jPanel4.setPreferredSize(new Dimension(333, 364));
+            jPanel4.setBorder(new TitledBorder(bundle.getString("AsposeWizardPanel.jPanel4.border.title")));
+            jPanel4.setPreferredSize(new Dimension(333, 438));
 
 
             //---- jLabelCommonUses ----
-            jLabelCommonUses.setText(bundle.getString("AsposePanelVisualComponent.jLabelCommonUses.text"));
+            jLabelCommonUses.setText(bundle.getString("AsposeWizardPanel.jLabelCommonUses.text"));
             Font labelFont = jLabelCommonUses.getFont();
 
             jLabelCommonUses.setFont(new Font(labelFont.getName(), Font.PLAIN, 14));
@@ -320,8 +354,8 @@ public class AsposeWizardPanel extends JPanel {
         }
 
         //---- jLabelMessage ----
-        jLabelMessage.setText(bundle.getString("AsposePanelVisualComponent.jLabelMessage.text"));
-        jLabelMessage.setToolTipText(bundle.getString("AsposePanelVisualComponent.jLabelMessage.toolTipText"));
+        jLabelMessage.setText(bundle.getString("AsposeWizardPanel.jLabelMessage.text"));
+        jLabelMessage.setToolTipText(bundle.getString("AsposeWizardPanel.jLabelMessage.toolTipText"));
 
         GroupLayout layout = new GroupLayout(this);
 
@@ -374,9 +408,11 @@ public class AsposeWizardPanel extends JPanel {
     private JCheckBox jCheckBoxAsposePdf;
     private JCheckBox jCheckBoxAsposeSlides;
     private JCheckBox jCheckBoxAsposeBarCode;
+    private JCheckBox jCheckBoxAsposeTasks;
     private JCheckBox jCheckBoxAsposeEmail;
     private JCheckBox jCheckBoxAsposeOCR;
     private JCheckBox jCheckBoxAsposeImaging;
+    private JCheckBox jCheckBoxAsposeDiagram;
     private JPanel jPanel4;
     private JLabel jLabelCommonUses;
     private JLabel jLabelMessage;
@@ -421,6 +457,10 @@ public class AsposeWizardPanel extends JPanel {
         {
             return true;
         }
+        if (jCheckBoxAsposeTasks.isSelected())
+        {
+            return true;
+        }
         if (jCheckBoxAsposeEmail.isSelected())
         {
             return true;
@@ -430,6 +470,10 @@ public class AsposeWizardPanel extends JPanel {
             return true;
         }
         if (jCheckBoxAsposeImaging.isSelected())
+        {
+            return true;
+        }
+        if (jCheckBoxAsposeDiagram.isSelected())
         {
             return true;
         }
@@ -461,9 +505,11 @@ public class AsposeWizardPanel extends JPanel {
     private void setSelectionOfComponents(boolean value)
     {
         jCheckBoxAsposeBarCode.setSelected(value);
+        jCheckBoxAsposeTasks.setSelected(value);
         jCheckBoxAsposeCells.setSelected(value);
         jCheckBoxAsposeEmail.setSelected(value);
         jCheckBoxAsposeImaging.setSelected(value);
+        jCheckBoxAsposeDiagram.setSelected(value);
         jCheckBoxAsposeOCR.setSelected(value);
         jCheckBoxAsposePdf.setSelected(value);
         jCheckBoxAsposeSlides.setSelected(value);
@@ -510,6 +556,12 @@ public class AsposeWizardPanel extends JPanel {
                     .get(AsposeConstants.ASPOSE_BARCODE);
             component.set_selected(true);
         }
+        if (jCheckBoxAsposeTasks.isSelected())
+        {
+            AsposeJavaComponent component = AsposeJavaComponents.list
+                    .get(AsposeConstants.ASPOSE_TASKS);
+            component.set_selected(true);
+        }
 
         if (jCheckBoxAsposeEmail.isSelected())
         {
@@ -529,11 +581,13 @@ public class AsposeWizardPanel extends JPanel {
                     .get(AsposeConstants.ASPOSE_IMAGING);
             component.set_selected(true);
         }
+        if (jCheckBoxAsposeDiagram.isSelected())
+        {
+            AsposeJavaComponent component = AsposeJavaComponents.list
+                    .get(AsposeConstants.ASPOSE_DIAGRAM);
+            component.set_selected(true);
+        }
 
-    }
-
-    public JCheckBox getjCheckBoxSelectAll() {
-        return jCheckBoxSelectAll;
     }
 
     public JCheckBox getjCheckBoxAsposeCells() {
@@ -556,6 +610,10 @@ public class AsposeWizardPanel extends JPanel {
         return jCheckBoxAsposeBarCode;
     }
 
+    public JCheckBox getjCheckBoxAsposeTasks() {
+        return jCheckBoxAsposeTasks;
+    }
+
     public JCheckBox getjCheckBoxAsposeEmail() {
         return jCheckBoxAsposeEmail;
     }
@@ -566,6 +624,10 @@ public class AsposeWizardPanel extends JPanel {
 
     public JCheckBox getjCheckBoxAsposeImaging() {
         return jCheckBoxAsposeImaging;
+    }
+
+    public JCheckBox getjCheckBoxAsposeDiagram() {
+        return jCheckBoxAsposeDiagram;
     }
 
 }

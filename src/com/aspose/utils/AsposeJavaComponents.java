@@ -73,6 +73,15 @@ public class AsposeJavaComponents {
             asposeBarcode.set_remoteExamplesRepository("https://github.com/asposebarcode/Aspose_BarCode_Java.git");
             list.put(AsposeConstants.ASPOSE_BARCODE, asposeBarcode);
 
+
+           //ASPOSE_Tasks
+           AsposeJavaComponent asposeTasks = new AsposeJavaComponent();
+           asposeTasks.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.tasks.aspx");
+           asposeTasks.get_downloadFileName();
+           asposeTasks.set_name(AsposeConstants.ASPOSE_TASKS);
+           asposeTasks.set_remoteExamplesRepository("https://github.com/asposetasks/Aspose_Tasks_Java.git");
+           list.put(AsposeConstants.ASPOSE_TASKS, asposeTasks);
+
             //ASPOSE_MetaFiles
             AsposeJavaComponent asposeMetafiles = new AsposeJavaComponent();
             asposeMetafiles.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.metafiles.aspx");
@@ -103,6 +112,14 @@ public class AsposeJavaComponents {
             asposeImaging.set_remoteExamplesRepository("https://github.com/asposeimaging/Aspose_Imaging_Java.git");
             list.put(AsposeConstants.ASPOSE_IMAGING, asposeImaging);
 
+           //ASPOSE_Diagram
+           AsposeJavaComponent asposeDiagram = new AsposeJavaComponent();
+           asposeDiagram.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.diagram.aspx");
+           asposeDiagram.set_downloadFileName("");
+           asposeDiagram.set_name(AsposeConstants.ASPOSE_DIAGRAM);
+           asposeDiagram.set_remoteExamplesRepository("https://github.com/asposediagram/Aspose_Diagram_Java.git");
+           list.put(AsposeConstants.ASPOSE_DIAGRAM, asposeDiagram);
 
-    }
+
+       }
 }

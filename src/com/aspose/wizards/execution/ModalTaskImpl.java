@@ -55,8 +55,4 @@ public class ModalTaskImpl extends Task.Modal {
         return done;
     }
 
-    public void setDone(boolean done) {
-        this.done = done;
-    }
-
 }
