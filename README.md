@@ -27,7 +27,7 @@ New! Aspose Java Product support is Added, in Aspose Project Wizard/Aspose API E
 1. Aspose.Diagram
 2. Aspose.Tasks
 
-## Release 1.1
+# Release 1.1
 
 **New Features**
 
