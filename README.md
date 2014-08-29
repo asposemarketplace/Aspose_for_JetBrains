@@ -18,7 +18,16 @@ With this plugin, you never need to check for new releases of Aspose components.
 
 [Continue reading ?](https://github.com/asposemarketplace/Aspose_for_JetBrains/wiki/Aspose-Project-Wizard)
 
-## Latest Release - Ver 1.1
+## Latest Release - Ver 1.2
+
+**New Features**
+
+New! Aspose Java Product support is Added, in Aspose Project Wizard/Aspose API Examples for following products:
+
+1. Aspose.Diagram
+2. Aspose.Tasks
+
+## Release 1.1
 
 **New Features**
 
