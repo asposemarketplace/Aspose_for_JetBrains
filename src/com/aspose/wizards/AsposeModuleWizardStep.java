@@ -101,7 +101,7 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
     void updateComponentsSelectionList()
     {
         AsposeConstants.println("2. ================ updateComponentsSelectionList ================");
-
+        AsposeJavaComponents.clearSelection();
         if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeCells().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_CELLS).set_selected(true);
@@ -115,7 +115,6 @@ public class AsposeModuleWizardStep extends ModuleWizardStep {
         if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposePdf().isSelected())
         {
             AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_PDF).set_selected(true);
-            AsposeJavaComponents.list.get(AsposeConstants.ASPOSE_PDF_KIT).set_selected(true);
         }
 
         if (((AsposeWizardPanel) getComponent()).getjCheckBoxAsposeSlides().isSelected())

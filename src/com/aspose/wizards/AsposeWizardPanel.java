@@ -19,10 +19,6 @@
 package com.aspose.wizards;
 
 import com.aspose.utils.AsposeConstants;
-import com.aspose.utils.AsposeJavaComponent;
-import com.aspose.utils.AsposeJavaComponents;
-
-
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
@@ -514,79 +510,6 @@ public class AsposeWizardPanel extends JPanel {
         jCheckBoxAsposePdf.setSelected(value);
         jCheckBoxAsposeSlides.setSelected(value);
         jCheckBoxAsposeWords.setSelected(value);
-
-    }
-    //=========================================================================
-    void updateComponentsSelectionList()
-    {
-        if (jCheckBoxAsposeCells.isSelected())
-        {
-            AsposeJavaComponent component = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_CELLS);
-            component.set_selected(true);
-        }
-
-        if (jCheckBoxAsposeWords.isSelected())
-        {
-            AsposeJavaComponent component = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_WORDS);
-            component.set_selected(true);
-        }
-        if (jCheckBoxAsposePdf.isSelected())
-        {
-            AsposeJavaComponent component = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_PDF);
-            component.set_selected(true);
-
-            AsposeJavaComponent component2 = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_PDF_KIT);
-            component2.set_selected(true);
-
-        }
-        if (jCheckBoxAsposeSlides.isSelected())
-        {
-            AsposeJavaComponent component = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_SLIDES);
-            component.set_selected(true);
-        }
-
-        if (jCheckBoxAsposeBarCode.isSelected())
-        {
-            AsposeJavaComponent component = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_BARCODE);
-            component.set_selected(true);
-        }
-        if (jCheckBoxAsposeTasks.isSelected())
-        {
-            AsposeJavaComponent component = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_TASKS);
-            component.set_selected(true);
-        }
-
-        if (jCheckBoxAsposeEmail.isSelected())
-        {
-            AsposeJavaComponent component = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_EMAIL);
-            component.set_selected(true);
-        }
-        if (jCheckBoxAsposeOCR.isSelected())
-        {
-            AsposeJavaComponent component = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_OCR);
-            component.set_selected(true);
-        }
-        if (jCheckBoxAsposeImaging.isSelected())
-        {
-            AsposeJavaComponent component = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_IMAGING);
-            component.set_selected(true);
-        }
-        if (jCheckBoxAsposeDiagram.isSelected())
-        {
-            AsposeJavaComponent component = AsposeJavaComponents.list
-                    .get(AsposeConstants.ASPOSE_DIAGRAM);
-            component.set_selected(true);
-        }
 
     }
 

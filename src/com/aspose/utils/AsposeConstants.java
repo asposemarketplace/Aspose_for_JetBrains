@@ -29,9 +29,7 @@ public class AsposeConstants
     public static final String ASPOSE_WORDS = "Aspose.Words";
     public static final String ASPOSE_PDF = "Aspose.Pdf";
     public static final String ASPOSE_SLIDES = "Aspose.Slides";
-    public static final String ASPOSE_PDF_KIT = "Aspose.Pdf.Kit";
     public static final String ASPOSE_BARCODE = "Aspose.BarCode";
-    public static final String ASPOSE_METAFILES = "Aspose.Metafiles";
     public static final String ASPOSE_EMAIL = "Aspose.Email";
     public static final String ASPOSE_OCR = "Aspose.OCR";
     public static final String ASPOSE_IMAGING = "Aspose.Imaging";
