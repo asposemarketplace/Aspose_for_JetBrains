@@ -27,8 +27,12 @@ public class AsposeExampleCallback implements CallBackHandler {
     }
     @Override
     public boolean executeTask(@NotNull ProgressIndicator progressIndicator) {
-       progressIndicator.setIndeterminate(true);
-       progressIndicator.setText("Preparing to refresh examples");
+      // progressIndicator.setIndeterminate(true);
+        // Set the progress bar percentage and text
+        progressIndicator.setFraction(0.10);
+
+        progressIndicator.setText("Preparing to refresh examples");
+
        final String item = (String) page.getComponentSelection().getSelectedItem();
 
                if (item != null && !item.equals("Select Java API")) {
@@ -39,15 +43,16 @@ public class AsposeExampleCallback implements CallBackHandler {
                        }
                    }, ModalityState.defaultModalityState());
 
-
+                   progressIndicator.setFraction(0.20);
                    AsposeJavaComponent component = AsposeJavaComponents.list.get(item);
-                   page.checkAndUpdateRepo(component);
+                   page.checkAndUpdateRepo(component,progressIndicator);
                    if (page.isExamplesDefinitionAvailable()) {
-                       page.populateExamplesTree(GitHelper.getExamplesDefinitionsPath(component), component.get_name(),top);
+                       progressIndicator.setFraction(0.60);
+                       page.populateExamplesTree(component, top,progressIndicator);
                    }
                }
 
-
+        progressIndicator.setFraction(1);
     return true;
    }
 }

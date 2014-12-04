@@ -20,6 +20,8 @@
 package com.aspose.examples;
 
 import com.aspose.examples.examplesmodel.Example;
+import com.aspose.examples.otherexamples.OtherExamples;
+import com.aspose.examples.otherexamples.OtherExamplesManager;
 import com.aspose.utils.*;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
@@ -30,107 +32,112 @@ import java.io.File;
 import java.io.IOException;
 
 public class AsposeExampleDialog extends DialogWrapper {
-  private static final Logger LOG = Logger.getInstance("#com.aspose.examples.AsposeExampleDialog");
+    private static final Logger LOG = Logger.getInstance("#com.aspose.examples.AsposeExampleDialog");
 
-  private final String myDescription;
+    private final String myDescription;
     private AsposeExamplePanel component;
     private Project project;
 
-  public AsposeExampleDialog(final String title, String description, Project project) {
-    super(false);
-    myDescription = description;
-    this.project = project;
-    setTitle(title);
-    init();
-    setOKButtonText("Create");
-    setOKActionEnabled(false);
-  }
+    public AsposeExampleDialog(final String title, String description, Project project) {
+        super(false);
+        myDescription = description;
+        this.project = project;
+        setTitle(title);
+        init();
+        setOKButtonText("Create");
+        setOKActionEnabled(false);
+    }
 
-  public void updateControls(boolean selection) {
-    setOKActionEnabled(selection);
-  }
+    public void updateControls(boolean selection) {
+        setOKActionEnabled(selection);
+    }
 
-  @Override
-  protected void doOKAction() {
-    super.doOKAction();
-    createExample();
-     project.getProjectFile().getFileSystem().refresh(false);
-      project.getBaseDir().getFileSystem().refresh(false);
-  }
-
-  @Override
-  public JComponent getPreferredFocusedComponent() {
-      AsposeConstants.println("AsposeExamplePanel getComponent(): is called ...");
-      if (component == null)
-      {
-          component = new AsposeExamplePanel(this, project);
+    @Override
+    protected void doOKAction() {
+        super.doOKAction();
+        createExample();
+        project.getProjectFile().getFileSystem().refresh(false);
+        project.getBaseDir().getFileSystem().refresh(false);
       }
 
-    return component.getComponentSelection();
-  }
+    @Override
+    public JComponent getPreferredFocusedComponent() {
+        AsposeConstants.println("AsposeExamplePanel getComponent(): is called ...");
+        if (component == null) {
+            component = new AsposeExamplePanel(this, project);
+        }
 
-  @Override
-  protected JComponent createCenterPanel() {
-      AsposeConstants.println("AsposeExamplePanel getComponent(): is called ...");
-      if (component == null)
-      {
-          component = new AsposeExamplePanel(this, project);
-      }
-      return component;
-  }
+        return component.getComponentSelection();
+    }
 
-  @Override
-  protected String getDimensionServiceKey() {
-    return "#com.aspose.examples.AsposeExampleDialog";
-  }
+    @Override
+    protected JComponent createCenterPanel() {
+        AsposeConstants.println("AsposeExamplePanel getComponent(): is called ...");
+        if (component == null) {
+            component = new AsposeExamplePanel(this, project);
+        }
+        return component;
+    }
+
+    @Override
+    protected String getDimensionServiceKey() {
+        return "#com.aspose.examples.AsposeExampleDialog";
+    }
 
     //=========================================================================
 
 
     //=========================================================================
-    private boolean createExample()
-    {
+    private boolean createExample() {
         String projectPath = component.getSelectedProjectRootPath();
         CustomMutableTreeNode comp = getSelectedNode();
-        if (comp == null)
-        {
+        if (comp == null) {
             return false;
         }
-        try
-        {
+        try {
             String path = comp.getExPath();
             Example ex = comp.getExample();
             AsposeJavaComponent asposeComponent = AsposeJavaComponents.list.get(component.getComponentSelection().getSelectedItem());
-            copyExample(GitHelper.getLocalRepositoryPath(asposeComponent) + File.separator + path, projectPath + File.separator + path);
-            if (ex == null)
-            {
+
+            // Integration of Apache POI Examples / Other FrameWork Examples
+            String sourceRepositoryPath = GitHelper.getLocalRepositoryPath(asposeComponent) + File.separator + path;
+            String destinationPath = projectPath + File.separator + path;
+
+            if (!asposeComponent.getOtherFrameworkExamples().isEmpty()) {
+                for (OtherExamples _otherExample : asposeComponent.getOtherFrameworkExamples()) {
+                    String examplesName = _otherExample.getExampleName();
+                    if (destinationPath.contains(examplesName)) {
+                        destinationPath = destinationPath.replace(examplesName + "\\", "");
+                        OtherExamplesManager.installExamplesDependencies(_otherExample, projectPath,project);
+                        break;
+                    }
+                }
+            }
+
+            copyExample(sourceRepositoryPath, destinationPath);
+            // END - Integration of Apache POI Examples / Other FrameWork Examples
+
+            if (ex == null) {
                 return false;
             }
 
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             return false;
         }
         return true;
     }
 
     //=========================================================================
-    private CustomMutableTreeNode getSelectedNode()
-    {
+    private CustomMutableTreeNode getSelectedNode() {
         return (CustomMutableTreeNode) component.getExamplesTree().getLastSelectedPathComponent();
     }
 
     //=========================================================================
-    private void copyExample(String sourcePath, String destinationPath)
-    {
-        try
-        {
+    private void copyExample(String sourcePath, String destinationPath) {
+        try {
             AsposeComponentsManager.copyDirectory(sourcePath, destinationPath);
-        }
-        catch (IOException ex)
-        {
-         //   Exceptions.printStackTrace(ex);
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 }

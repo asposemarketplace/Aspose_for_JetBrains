@@ -5,6 +5,9 @@
 package com.aspose.utils;
 
 import java.io.File;
+
+import com.aspose.examples.otherexamples.OtherExamplesManager;
+import com.intellij.openapi.progress.ProgressIndicator;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.internal.storage.file.FileRepository;
@@ -14,7 +17,7 @@ import org.eclipse.jgit.internal.storage.file.FileRepository;
  * @author Administrator
  */
 public class GitHelper {
-    private static void updateRepository(String localPath, String remotePath) throws Exception
+    public static void updateRepository(String localPath, String remotePath) throws Exception
 	{        
 		Repository localRepo;
 		try
@@ -50,11 +53,19 @@ public class GitHelper {
 		}
 	}
 
-   public static void updateRepository(AsposeJavaComponent component)
+   public static void updateRepository(AsposeJavaComponent component, ProgressIndicator p)
    {
+       p.setText2("Downloading " + component.get_name() + " examples ...");
        checkAndCreateFolder(getLocalRepositoryPath(component));
+
        try {
+
            updateRepository(getLocalRepositoryPath(component), component.get_remoteExamplesRepository());
+           p.setFraction(0.3);
+           // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
+           OtherExamplesManager.updateOtherExamplesRepositories(component,p);
+           // adeel.ilyas@aspose.com
+           p.setFraction(0.5);
        } catch (Exception e) {
        }
    }

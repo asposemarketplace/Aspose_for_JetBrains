@@ -34,9 +34,15 @@ public class ModalTaskImpl extends Task.Modal {
         this.callback = callback;
     }
 
+    public ModalTaskImpl(@Nullable Project project,String message) {
+        super(project,message, true);
+    }
+
     @Override
     public void run(@NotNull ProgressIndicator progressIndicator) {
-          done = callback.executeTask(progressIndicator);
+        if (callback!=null) {
+            done = callback.executeTask(progressIndicator);
+        }
     }
 
     @Override

@@ -1,22 +1,24 @@
 /**
-* Copyright (c) Aspose 2002-2014. All Rights Reserved.
-*
-* LICENSE: This program is free software; you can redistribute it 
-* and/or modify it under the terms of the GNU General Public License
-* as published by the Free Software Foundation; either version 3
-* of the License, or (at your option) any later version.
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
-* You should have received a copy of the GNU General Public License
-* along with this program. If not, 
-* see http://opensource.org/licenses/gpl-3.0.html
-*
-* @author Adeel Ilyas <adeel.ilyas@aspose.com>
-*  
-*/
+ * Copyright (c) Aspose 2002-2014. All Rights Reserved.
+ *
+ * LICENSE: This program is free software; you can redistribute it
+ * and/or modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 3
+ * of the License, or (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not,
+ * see http://opensource.org/licenses/gpl-3.0.html
+ *
+ * @author Adeel Ilyas <adeel.ilyas@aspose.com>
+ *
+ */
 package com.aspose.utils;
+
+import com.aspose.examples.otherexamples.OtherExamplesManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,13 +27,19 @@ public class AsposeJavaComponents {
 
     public static Map<String, AsposeJavaComponent> list = new HashMap<String, AsposeJavaComponent>();
 
-static {
+    static {
         //ASPOSE_CELLS
         AsposeJavaComponent asposeCells = new AsposeJavaComponent();
         asposeCells.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.cells.aspx");
         asposeCells.set_downloadFileName("aspose-cells.zip");
         asposeCells.set_name(AsposeConstants.ASPOSE_CELLS);
         asposeCells.set_remoteExamplesRepository("https://github.com/asposecells/Aspose_Cells_Java.git");
+
+        // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
+        asposeCells.addOtherFrameworkExamples(OtherExamplesManager.getPOIExamples(asposeCells));
+        // adeel.ilyas@aspose.com
+
+
         list.put(AsposeConstants.ASPOSE_CELLS, asposeCells);
 
         //ASPOSE_WORDS
@@ -40,6 +48,11 @@ static {
         asposeWords.set_downloadFileName("aspose-words.zip");
         asposeWords.set_name(AsposeConstants.ASPOSE_WORDS);
         asposeWords.set_remoteExamplesRepository("https://github.com/asposewords/Aspose_Words_Java.git");
+
+        // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
+        asposeWords.addOtherFrameworkExamples(OtherExamplesManager.getPOIExamples(asposeWords));
+        // adeel.ilyas@aspose.com
+
         list.put(AsposeConstants.ASPOSE_WORDS, asposeWords);
 
         //ASPOSE_PDF
@@ -56,6 +69,11 @@ static {
         asposeSlides.get_downloadFileName();
         asposeSlides.set_name(AsposeConstants.ASPOSE_SLIDES);
         asposeSlides.set_remoteExamplesRepository("https://github.com/asposeslides/Aspose_Slides_Java.git");
+
+        // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
+        asposeSlides.addOtherFrameworkExamples(OtherExamplesManager.getPOIExamples(asposeSlides));
+        // adeel.ilyas@aspose.com
+
         list.put(AsposeConstants.ASPOSE_SLIDES, asposeSlides);
 
 
@@ -83,6 +101,11 @@ static {
         asposeEmail.get_downloadFileName();
         asposeEmail.set_name(AsposeConstants.ASPOSE_EMAIL);
         asposeEmail.set_remoteExamplesRepository("https://github.com/asposeemail/Aspose_Email_Java.git");
+
+        // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
+        asposeEmail.addOtherFrameworkExamples(OtherExamplesManager.getPOIExamples(asposeEmail));
+        // adeel.ilyas@aspose.com
+
         list.put(AsposeConstants.ASPOSE_EMAIL, asposeEmail);
 
         //ASPOSE_OCR
@@ -109,13 +132,12 @@ static {
         list.put(AsposeConstants.ASPOSE_DIAGRAM, asposeDiagram);
 
 
-        }
+    }
 
     public static void clearSelection() {
-        for(AsposeJavaComponent component:AsposeJavaComponents.list.values())
-        {
+        for (AsposeJavaComponent component : AsposeJavaComponents.list.values()) {
             component.set_selected(false);
         }
 
     }
-        }
+}

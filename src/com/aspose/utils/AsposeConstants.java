@@ -36,6 +36,16 @@ public class AsposeConstants
     public static final String ASPOSE_DIAGRAM = "Aspose.Diagram";
     public static final String ASPOSE_TASKS = "Aspose.Tasks";
 
+    // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
+    // Apache POI Comparison Examples
+    public static final String ASPOSE_WORDS_APACHE_POI = "Aspose.Words_ApachePOI.WP";
+    public static final String ASPOSE_CELLS_APACHE_POI = "Aspose.Cells_ApachePO.SS";
+    public static final String ASPOSE_SLIDES_APACHE_POI = "Aspose.Slides_ApachePOI.SL";
+    public static final String ASPOSE_EMAIL_APACHE_POI = "Aspose.Email_ApachePOI.SM";
+
+    // Examples FrameWork
+    public static final String APACHE_POI = "APACHE_POI";
+    // adeel.ilyas@aspose.com
 
     //Project
     public static final String LIBRARY_NAME = "AposeAPI";

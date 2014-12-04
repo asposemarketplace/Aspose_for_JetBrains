@@ -32,8 +32,10 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
+import com.aspose.examples.otherexamples.OtherExamplesManager;
 import com.aspose.utils.*;
 import com.aspose.wizards.execution.ModalTaskImpl;
+import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.ComboBox;
@@ -217,7 +219,7 @@ public final class AsposeExamplePanel extends JPanel
         getComponentSelection().addItem("Select API");
         for (String directory : directories)
         {
-            if (!directory.equals("CopyLibs"))
+            if (!directory.equals("CopyLibs") && !directory.equals("ExamplesFrameWorks"))
             {
                 getComponentSelection().addItem(directory);
             }
@@ -333,7 +335,7 @@ public final class AsposeExamplePanel extends JPanel
     }
 
     //=========================================================================
-    public void checkAndUpdateRepo(AsposeJavaComponent component)
+    public void checkAndUpdateRepo(AsposeJavaComponent component,ProgressIndicator p)
     {
         if (null == component)
         {
@@ -355,8 +357,8 @@ public final class AsposeExamplePanel extends JPanel
         {
             try
             {
-                GitHelper.updateRepository(component);
-                examplesDefinitionAvailable = true;
+                  examplesDefinitionAvailable = true;
+                  p.setFraction(0.30);
             }
             catch (Exception e)
             {
@@ -368,10 +370,11 @@ public final class AsposeExamplePanel extends JPanel
 
                 if (AsposeComponentsManager.isIneternetConnected())
                 {
-                    GitHelper.updateRepository(component);
+                    GitHelper.updateRepository(component,p);
                     if (GitHelper.isExamplesDefinitionsPresent(component))
                     {
-                            examplesDefinitionAvailable = true;
+                        examplesDefinitionAvailable = true;
+
                     }
                 }
                 else
@@ -379,12 +382,14 @@ public final class AsposeExamplePanel extends JPanel
                     showMessage(AsposeConstants.INTERNET_CONNECTION_REQUIRED_MESSAGE_TITLE, component.get_name() + " - " + AsposeConstants.EXAMPLES_INTERNET_CONNECTION_REQUIRED_MESSAGE, JOptionPane.OK_OPTION, JOptionPane.INFORMATION_MESSAGE);
                 }
              }
+        p.setFraction(0.50);
     }
 
     //====================================================================
-    public  void populateExamplesTree(String examplesDefinitionFile, String com,CustomMutableTreeNode top)
+    public  void populateExamplesTree(AsposeJavaComponent asposeComponent,CustomMutableTreeNode top,ProgressIndicator p)
 
     {
+        String examplesDefinitionFile = GitHelper.getExamplesDefinitionsPath(asposeComponent);
         try
         {
             JAXBContext jaxbContext = JAXBContext.newInstance(ObjectFactory.class);
@@ -398,6 +403,13 @@ public final class AsposeExamplePanel extends JPanel
             List<Folders> rootFoldersList = data.getFolders();
             parseFoldersTree(rootFoldersList, top);
             parseExamples(data.getExamples(), top);
+            p.setFraction(0.7);
+            // Integration of Apache POI Examples / Other FrameWork Examples
+            // Add Apache POI related Aspose API (comparison) examples if available any.
+            OtherExamplesManager.addOtherExamples(top, asposeComponent,p);
+            //
+
+
         }
         catch (JAXBException ex)
         {
