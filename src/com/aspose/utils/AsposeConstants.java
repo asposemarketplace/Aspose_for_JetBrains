@@ -39,7 +39,7 @@ public class AsposeConstants
     // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
     // Apache POI Comparison Examples
     public static final String ASPOSE_WORDS_APACHE_POI = "Aspose.Words_ApachePOI.WP";
-    public static final String ASPOSE_CELLS_APACHE_POI = "Aspose.Cells_ApachePO.SS";
+    public static final String ASPOSE_CELLS_APACHE_POI = "Aspose.Cells_ApachePOI.SS";
     public static final String ASPOSE_SLIDES_APACHE_POI = "Aspose.Slides_ApachePOI.SL";
     public static final String ASPOSE_EMAIL_APACHE_POI = "Aspose.Email_ApachePOI.SM";
 
