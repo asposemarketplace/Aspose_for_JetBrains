@@ -18,7 +18,35 @@ With this plugin, you never need to check for new releases of Aspose components.
 
 [Continue reading ?](https://github.com/asposemarketplace/Aspose_for_JetBrains/wiki/Aspose-Project-Wizard)
 
-# Latest Release - Ver 1.2
+# Latest Release - Ver 1.3
+
+**Critical fix for Aspose Examples Wizard:**
+Aspose Java APIs usage examples repository locations have been changed. So Aspose Examples wizard will no longer work without this update.
+
+Although not changing version number because all the plugin features and code will remain same.
+
+**Examples:**
+
+
+    Aspose.Words vs Apache POI WP (HWPF + XWPF)
+
+    Aspose.Cells vs Apache POI SS (HSSF + XSSF).
+
+    Aspose.Slides vs Apache POI SL (HSLF + XSLF).
+
+    Aspose.Email vs Apache POI HSMF.
+
+
+New Features
+
+
+    Integration of Aspose APIs code and feature comparison examples with Apache POI framework
+
+    Progress Monitors are implemented for long tasks i.e while downloading of examples and their framework dependencies.
+
+    SourceCodes a) OtherExamples API (framework) created for the futher future integrations of new examples and their dependencies. b) New Packages: com.aspose.examples.otherexamples
+
+## Release 1.2
 
 **New Features**
 
