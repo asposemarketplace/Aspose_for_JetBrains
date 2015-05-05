@@ -27,24 +27,20 @@ Although not changing version number because all the plugin features and code wi
 
 **Examples:**
 
+Aspose.Words vs Apache POI WP (HWPF + XWPF)
+Aspose.Cells vs Apache POI SS (HSSF + XSSF).
+Aspose.Slides vs Apache POI SL (HSLF + XSLF).
+Aspose.Email vs Apache POI HSMF.
 
-    Aspose.Words vs Apache POI WP (HWPF + XWPF)
+**New Features**
 
-    Aspose.Cells vs Apache POI SS (HSSF + XSSF).
+Integration of Aspose APIs code and feature comparison examples with Apache POI framework
 
-    Aspose.Slides vs Apache POI SL (HSLF + XSLF).
+Progress Monitors are implemented for long tasks i.e while downloading of examples and their framework dependencies.
 
-    Aspose.Email vs Apache POI HSMF.
-
-
-New Features
-
-
-    Integration of Aspose APIs code and feature comparison examples with Apache POI framework
-
-    Progress Monitors are implemented for long tasks i.e while downloading of examples and their framework dependencies.
-
-    SourceCodes a) OtherExamples API (framework) created for the futher future integrations of new examples and their dependencies. b) New Packages: com.aspose.examples.otherexamples
+SourceCodes Changes
+a) OtherExamples API (framework) created for the futher future integrations of new examples and their dependencies. 
+b) New Packages: com.aspose.examples.otherexamples
 
 ## Release 1.2
 
