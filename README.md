@@ -64,3 +64,5 @@ Below simple steps will smoothly lead to successful configuration of Aspose Proj
 *   [Video tutorial showing how to create an Aspose for Java API project in IntelliJ IDEA](http://youtu.be/tQyk10MXbGw)
 
 *   [Video tutorial showing how to create an Aspose for Java API project in IntelliJ IDEA](http://goo.gl/u0mfZu)
+
+![](http://i.imgur.com/IB3pzFP.jpg)
