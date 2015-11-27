@@ -33,12 +33,12 @@ public class AsposeJavaComponents {
         asposeCells.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.cells.aspx");
         asposeCells.set_downloadFileName("aspose-cells.zip");
         asposeCells.set_name(AsposeConstants.ASPOSE_CELLS);
-        asposeCells.set_remoteExamplesRepository("https://github.com/AdeelIlyas2014/Aspose_Cells_Java.git");
+
+        asposeCells.set_remoteExamplesRepository("https://github.com/asposemarketplace/Aspose-Cells-Java");
 
         // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
         asposeCells.addOtherFrameworkExamples(OtherExamplesManager.getPOIExamples(asposeCells));
         // adeel.ilyas@aspose.com
-
 
         list.put(AsposeConstants.ASPOSE_CELLS, asposeCells);
 
@@ -47,7 +47,8 @@ public class AsposeJavaComponents {
         asposeWords.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.words.aspx");
         asposeWords.set_downloadFileName("aspose-words.zip");
         asposeWords.set_name(AsposeConstants.ASPOSE_WORDS);
-        asposeWords.set_remoteExamplesRepository("https://github.com/AdeelIlyas2014/Aspose_Words_Java.git");
+
+        asposeWords.set_remoteExamplesRepository("https://github.com/asposemarketplace/Aspose-Words-Java");
 
         // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
         asposeWords.addOtherFrameworkExamples(OtherExamplesManager.getPOIExamples(asposeWords));
@@ -60,7 +61,9 @@ public class AsposeJavaComponents {
         asposePDF.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.pdf.aspx");
         asposePDF.get_downloadFileName();
         asposePDF.set_name(AsposeConstants.ASPOSE_PDF);
-        asposePDF.set_remoteExamplesRepository("https://github.com/AdeelIlyas2014/Aspose_Pdf_Java.git");
+
+        asposePDF.set_remoteExamplesRepository("https://github.com/asposemarketplace/Aspose-Pdf-Java");
+
         list.put(AsposeConstants.ASPOSE_PDF, asposePDF);
 
         //ASPOSE_Slides
@@ -68,7 +71,9 @@ public class AsposeJavaComponents {
         asposeSlides.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.slides.aspx");
         asposeSlides.get_downloadFileName();
         asposeSlides.set_name(AsposeConstants.ASPOSE_SLIDES);
-        asposeSlides.set_remoteExamplesRepository("https://github.com/AdeelIlyas2014/Aspose_Slides_Java.git");
+
+        asposeSlides.set_remoteExamplesRepository("https://github.com/asposemarketplace/Aspose-Slides-Java");
+
 
         // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
         asposeSlides.addOtherFrameworkExamples(OtherExamplesManager.getPOIExamples(asposeSlides));
@@ -82,25 +87,28 @@ public class AsposeJavaComponents {
         asposeBarcode.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.barcode.aspx");
         asposeBarcode.get_downloadFileName();
         asposeBarcode.set_name(AsposeConstants.ASPOSE_BARCODE);
-        asposeBarcode.set_remoteExamplesRepository("https://github.com/AdeelIlyas2014/Aspose_BarCode_Java.git");
-        list.put(AsposeConstants.ASPOSE_BARCODE, asposeBarcode);
 
+        asposeBarcode.set_remoteExamplesRepository("https://github.com/asposemarketplace/Aspose-BarCode-Java");
+
+        list.put(AsposeConstants.ASPOSE_BARCODE, asposeBarcode);
 
         //ASPOSE_Tasks
         AsposeJavaComponent asposeTasks = new AsposeJavaComponent();
         asposeTasks.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.tasks.aspx");
         asposeTasks.get_downloadFileName();
         asposeTasks.set_name(AsposeConstants.ASPOSE_TASKS);
-        asposeTasks.set_remoteExamplesRepository("https://github.com/AdeelIlyas2014/Aspose_Tasks_Java.git");
-        list.put(AsposeConstants.ASPOSE_TASKS, asposeTasks);
 
+        asposeTasks.set_remoteExamplesRepository("https://github.com/asposemarketplace/Aspose-Tasks-Java");
+
+        list.put(AsposeConstants.ASPOSE_TASKS, asposeTasks);
 
         //ASPOSE_Email
         AsposeJavaComponent asposeEmail = new AsposeJavaComponent();
         asposeEmail.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.email.aspx");
         asposeEmail.get_downloadFileName();
         asposeEmail.set_name(AsposeConstants.ASPOSE_EMAIL);
-        asposeEmail.set_remoteExamplesRepository("https://github.com/AdeelIlyas2014/Aspose_Email_Java.git");
+
+        asposeEmail.set_remoteExamplesRepository("https://github.com/asposemarketplace/Aspose-Email-Java");
 
         // Added by adeel.ilyas@aspose.com - Integration of Apache POI Examples / Other FrameWork Examples
         asposeEmail.addOtherFrameworkExamples(OtherExamplesManager.getPOIExamples(asposeEmail));
@@ -113,6 +121,7 @@ public class AsposeJavaComponents {
         asposeOCR.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.ocr.aspx");
         asposeOCR.get_downloadFileName();
         asposeOCR.set_name(AsposeConstants.ASPOSE_OCR);
+        asposeOCR.set_remoteExamplesRepository("https://github.com/asposemarketplace/Aspose-OCR-Java");
         list.put(AsposeConstants.ASPOSE_OCR, asposeOCR);
 
         //ASPOSE_Imaging
@@ -120,7 +129,9 @@ public class AsposeJavaComponents {
         asposeImaging.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.imaging.aspx");
         asposeImaging.set_downloadFileName("");
         asposeImaging.set_name(AsposeConstants.ASPOSE_IMAGING);
-        asposeImaging.set_remoteExamplesRepository("https://github.com/AdeelIlyas2014/Aspose_Imaging_Java.git");
+
+        asposeImaging.set_remoteExamplesRepository("https://github.com/asposemarketplace/Aspose-Imaging-Java");
+
         list.put(AsposeConstants.ASPOSE_IMAGING, asposeImaging);
 
         //ASPOSE_Diagram
@@ -128,9 +139,10 @@ public class AsposeJavaComponents {
         asposeDiagram.set_downloadUrl("http://community.aspose.com/community/secureservices/asposedownloads/java/aspose.diagram.aspx");
         asposeDiagram.set_downloadFileName("");
         asposeDiagram.set_name(AsposeConstants.ASPOSE_DIAGRAM);
-        asposeDiagram.set_remoteExamplesRepository("https://github.com/AdeelIlyas2014/Aspose_Diagram_Java.git");
-        list.put(AsposeConstants.ASPOSE_DIAGRAM, asposeDiagram);
 
+        asposeDiagram.set_remoteExamplesRepository("https://github.com/asposemarketplace/Aspose-Diagram-Java");
+
+        list.put(AsposeConstants.ASPOSE_DIAGRAM, asposeDiagram);
 
     }
 

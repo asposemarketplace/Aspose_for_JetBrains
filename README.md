@@ -1,6 +1,6 @@
-# Aspose for JetBrains
+﻿# Aspose for JetBrains
 
-Aspose for JetBrains allows developers to create an Aspose Java project through plugin provided Aspose Project Wizard. The wizard enables the developers to select and download the latest Aspose libraries and samples / example codes of them.
+Aspose for JetBrains allows developers to create an Aspose Java project through plugin provided Aspose Project Wizard. The wizard enables the developers to select and download the latest Aspose libraries and sample example codes.
 
 This plugin helps you to explore Aspose Java APIs inside your favorite IntelliJ IDE.
 
@@ -14,49 +14,44 @@ This plugin helps you to explore Aspose Java APIs inside your favorite IntelliJ 
 
 With this plugin, you never need to check for new releases of Aspose components. Whenever a new release is published, you will be notified while creating project and you can also check release notes to save your time. 
 
-# How to use Aspose Project Wizard on JetBrains ...
+# How to use Aspose Project Wizard in IntelliJ IDEA ...
 
-[Continue reading ?](https://github.com/asposemarketplace/Aspose_for_JetBrains/wiki/Aspose-Project-Wizard)
+[Continue reading →](http://www.aspose.com/docs/display/totaljava/1.2.2+Using+Aspose.Total+Java+for+IntelliJ+IDEA)
 
-# Latest Release - Ver 1.3
+## Plugin Documentation
 
-**Critical fix for Aspose Examples Wizard:**
-Aspose Java APIs usage examples repository locations have been changed. So Aspose Examples wizard will no longer work without this update.
+For the complete documentation of this Intellij IDEA plugin, [please go through this wiki - click here](http://www.aspose.com/docs/display/totaljava/1.+Aspose.Total+Java+for+IntelliJ+IDEA)
 
-Although not changing version number because all the plugin features and code will remain same.
-
-**Examples:**
-
-*   Aspose.Words vs Apache POI WP (HWPF + XWPF)
-*   Aspose.Cells vs Apache POI SS (HSSF + XSSF).
-*   Aspose.Slides vs Apache POI SL (HSLF + XSLF).
-*   Aspose.Email vs Apache POI HSMF.
+# Latest Release - Ver 1.4 (Critical: Aspose Examples Wizard will only work with this latest update)
 
 **New Features**
 
-*   Integration of Aspose APIs code and feature comparison examples with Apache POI framework
+* Aspose.OCR for Java Examples are now available in Aspose Examples Wizard of your favorite InteliJ IDEA
+* Supports and Tested with latest IntelliJ IDEA v.14.0.1, v.14.1.5 and v.15.0.1
 
-*   Progress Monitors are implemented for long tasks i.e while downloading of examples and their framework dependencies.
-
-SourceCodes Changes
-
-*   a) OtherExamples API (framework) created for the futher future integrations of new examples and their dependencies. 
-*   b) New Packages: com.aspose.examples.otherexamples
-
-## Release 1.2
+# Release - Ver 1.3 and 1.3.1
 
 **New Features**
 
-New! Aspose Java Product support is Added, in Aspose Project Wizard/Aspose API Examples for following products:
+* Aspose Java vs Apache POI Examples available in Aspose Examples Wizard.
+* User experience improved. GUI improvements / Progress Monitors for long tasks. (while downloading of examples and API jars).
 
-1. Aspose.Diagram
-2. Aspose.Tasks
+# Release - Ver 1.2
+
+**New Features**
+
+* Support is added in Aspose Project wizard & Aspose Examples wizard for following new Aspose products:
+
+   1. Aspose.Diagram
+   2. Aspose.Tasks
 
 ## Release 1.1
 
 **New Features**
 
-Release v1.1 of Aspose Java plugin for JetBrains IDE, provides the support of getting Aspose Java API samples through **Aspose Example** option in New menu as following:
+This release of Aspose Java plugin for JetBrains IDE, provides sample example source codes for using Aspose Java APIs through Aspose Example - wizard (option in New Menu)
+
+By following the steps below:
 
 1.  First Create Java Project by using plugin provided Aspose Project Wizard
 2.  **Right Click** on Project or Select **File** Menu
@@ -66,7 +61,7 @@ Release v1.1 of Aspose Java plugin for JetBrains IDE, provides the support of ge
 
 Finally, the downloaded / created example is ready to be evaluated / enhanced as per your usage requirement.
 
-For the complete detail please check the following step by step wiki documentation, [click here](https://github.com/asposemarketplace/Aspose_for_JetBrains/wiki/Aspose-Example "AsposeExample")
+For the complete detail please check the following step by step wiki documentation, [click here](https://bitbucket.org/asposemarketplace/aspose-for-jetbrains/wiki/Aspose%20Example "AsposeExample")
 
 # How to configure source code of Aspose Project Wizard
 
@@ -80,14 +75,19 @@ Below simple steps will smoothly lead to successful configuration of Aspose Proj
 
 *   [Aspose project Wizard for JetBrains](http://goo.gl/1DzKBe "Aspose project Wizard for JetBrains")
 
-*   [Aspose APIs Examples Integration with JetBrains](http://goo.gl/4D578h "Aspose Java Example") (new feature!)
+*   [Aspose APIs Examples
+    Integration with JetBrains](http://goo.gl/4D578h "Aspose Java Example")
 
-*   [Aspose Java Components](http://www.aspose.com/java/total-component.aspx)
+*   [Aspose Java
+    Components](http://www.aspose.com/java/total-component.aspx)
 
-*   [Download Aspose IntelliJ IDEA Plugin for Manual Installation](http://plugins.jetbrains.com/plugin/7461)
+*   [Download Aspose IntelliJ IDEA
+    Plugin for Manual Installation](http://plugins.jetbrains.com/plugin/7461)
 
-*   [Video tutorial showing how to create an Aspose for Java API project in IntelliJ IDEA](http://youtu.be/tQyk10MXbGw)
+*   [Video tutorial showing how to create an Aspose
+    for Java API project in IntelliJ IDEA](http://youtu.be/tQyk10MXbGw)
 
-*   [Video tutorial showing how to create an Aspose for Java API project in IntelliJ IDEA](http://goo.gl/u0mfZu)
+*   [Video tutorial showing how to create an Aspose for
+    Java API project in IntelliJ IDEA](http://goo.gl/u0mfZu)
 
 ![](http://i.imgur.com/IB3pzFP.jpg)
