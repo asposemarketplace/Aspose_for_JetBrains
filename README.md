@@ -76,7 +76,7 @@ Below simple steps will smoothly lead to successful configuration of Aspose Proj
 *   [Aspose project Wizard for JetBrains (IntelliJ IDEA)](http://goo.gl/1DzKBe "Aspose project Wizard for JetBrains (IntelliJ IDEA)")
 
 *   [Aspose APIs Examples
-    Integration with JetBrains](http://goo.gl/4D578h "Aspose Java Example")
+    Integration with JetBrains (IntelliJ IDEA)](http://goo.gl/4D578h "Aspose Java Example")
 
 *   [Aspose Java
     Components](http://www.aspose.com/java/total-component.aspx)
