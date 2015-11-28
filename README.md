@@ -1,6 +1,6 @@
-﻿# Aspose for JetBrains
+﻿# Aspose.Total Java for IntelliJ IDEA (formerly: Aspose for JetBrains)
 
-Aspose for JetBrains allows developers to create an Aspose Java project through plugin provided Aspose Project Wizard. The wizard enables the developers to select and download the latest Aspose libraries and sample example codes.
+Aspose.Total Java for IntelliJ IDEA allows developers to create Aspose Java project through plugin provided Aspose Project Wizard. The wizard enables the developers to select and download the latest Aspose Java APIs and sample example codes.
 
 This plugin helps you to explore Aspose Java APIs inside your favorite IntelliJ IDE.
 
@@ -49,7 +49,7 @@ For the complete documentation of this Intellij IDEA plugin, [please go through 
 
 **New Features**
 
-This release of Aspose Java plugin for JetBrains IDE, provides sample example source codes for using Aspose Java APIs through Aspose Example - wizard (option in New Menu)
+This release of Aspose.Total Java for IntelliJ IDEA, provides sample example source codes for using Aspose Java APIs through Aspose Example - wizard (option in New Menu)
 
 By following the steps below:
 
@@ -73,7 +73,7 @@ Below simple steps will smoothly lead to successful configuration of Aspose Proj
 4.  Aspose for IntelliJ plugin code is now ready to enhance.
 ### Important Links
 
-*   [Aspose project Wizard for JetBrains](http://goo.gl/1DzKBe "Aspose project Wizard for JetBrains")
+*   [Aspose project Wizard for JetBrains (IntelliJ IDEA)](http://goo.gl/1DzKBe "Aspose project Wizard for JetBrains (IntelliJ IDEA)")
 
 *   [Aspose APIs Examples
     Integration with JetBrains](http://goo.gl/4D578h "Aspose Java Example")
