@@ -78,7 +78,7 @@ Below simple steps will smoothly lead to successful configuration of Aspose Proj
 4.  Aspose for IntelliJ plugin code is now ready to enhance.
 ### Important Links
 
-*   [Aspose.Total Java for IntelliJ IDEA (Aspose project Wizard for IntelliJ IDEA)](http://goo.gl/1DzKBe "Aspose.Total Java for IntelliJ IDEA (Aspose project Wizard for IntelliJ IDEA)")
+*   [Aspose.Total Java for IntelliJ IDEA (Aspose project wizard for IntelliJ IDEA)](http://goo.gl/1DzKBe "Aspose.Total Java for IntelliJ IDEA (Aspose project wizard for IntelliJ IDEA)")
 
 *   [Aspose APIs Examples
     Integration with JetBrains (IntelliJ IDEA)](http://goo.gl/4D578h "Aspose Java Example")
