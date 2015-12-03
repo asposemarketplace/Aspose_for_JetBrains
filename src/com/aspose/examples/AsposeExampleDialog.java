@@ -107,7 +107,7 @@ public class AsposeExampleDialog extends DialogWrapper {
                 for (OtherExamples _otherExample : asposeComponent.getOtherFrameworkExamples()) {
                     String examplesName = _otherExample.getExampleName();
                     if (destinationPath.contains(examplesName)) {
-                        destinationPath = destinationPath.replace(examplesName + "\\", "");
+                        destinationPath = destinationPath.replace(examplesName + File.separator, "");
                         OtherExamplesManager.installExamplesDependencies(_otherExample, projectPath,project);
                         break;
                     }

@@ -48,15 +48,15 @@ public class OtherExamplesManager {
 
         //Defining FrameWork Lib Dependencies:
         poiFrameWork.addLibDependency(new LibDependency("dom4j-1.6.1.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/dom4j-1.6.1.jar"));
-        poiFrameWork.addLibDependency(new LibDependency("poi-3.11-beta1-20140306.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-3.11-beta1-20140306.jar"));
-        poiFrameWork.addLibDependency(new LibDependency("poi-ooxml-3.11-beta1-20140306.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-ooxml-3.11-beta1-20140306.jar"));
-        poiFrameWork.addLibDependency(new LibDependency("poi-ooxml-schemas-3.11-beta1-20140306.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-ooxml-schemas-3.11-beta1-20140306.jar"));
-        poiFrameWork.addLibDependency(new LibDependency("poi-scratchpad-3.11-beta1-20140306.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-scratchpad-3.11-beta1-20140306.jar"));
-        poiFrameWork.addLibDependency(new LibDependency("xmlbeans-2.3.0.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/xmlbeans-2.3.0.jar"));
-
-        poiFrameWork.addLibDependency(new LibDependency("poi-examples-3.11-beta1-20140306.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-examples-3.11-beta1-20140306.jar"));
-        poiFrameWork.addLibDependency(new LibDependency("poi-excelant-3.11-beta1-20140306.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-excelant-3.11-beta1-20140306.jar"));
+        poiFrameWork.addLibDependency(new LibDependency("xmlbeans-2.6.0.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/xmlbeans-2.6.0.jar"));
         poiFrameWork.addLibDependency(new LibDependency("stax-api-1.0.1.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/stax-api-1.0.1.jar"));
+
+        poiFrameWork.addLibDependency(new LibDependency("poi-3.11.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-3.11-20141221.jar"));
+        poiFrameWork.addLibDependency(new LibDependency("poi-ooxml-3.11.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-ooxml-3.11-20141221.jar"));
+        poiFrameWork.addLibDependency(new LibDependency("poi-ooxml-schemas-3.11.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-ooxml-schemas-3.11-20141221.jar"));
+        poiFrameWork.addLibDependency(new LibDependency("poi-scratchpad-3.11.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-scratchpad-3.11-20141221.jar"));
+        poiFrameWork.addLibDependency(new LibDependency("poi-examples-3.11.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-examples-3.11-20141221.jar"));
+        poiFrameWork.addLibDependency(new LibDependency("poi-excelant-3.11.jar", "https://raw.githubusercontent.com/asposemarketplace/Aspose_for_Apache_POI/master/lib/ApachePOI/poi-excelant-3.11-20141221.jar"));
         return poiFrameWork;
     }
 
