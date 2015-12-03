@@ -27,7 +27,12 @@ For the complete documentation of this Intellij IDEA plugin, [please go through 
 **New Features**
 
 * Aspose.OCR for Java Examples are now available in Aspose Examples Wizard of your favorite InteliJ IDEA
+* Aspose.OCR for Java Examples are now available in Aspose Examples Wizard of your favorite InteliJ IDEA
+* More Aspose.Slides Examples comparing features of Apache POI HSLF and XSLF.
+* More Aspose.Words Examples with Missing Features of Apache POI HWPF and XWPF.
+* Aspose.Cells Examples showing Missing Features of Apache POI HSSF and XSSF.
 * Supports and Tested with latest IntelliJ IDEA v.14.0.1, v.14.1.5 and v.15.0.1
+* Necessary update for Aspose Examples wizard since examples may not appear proper with older versions of plugin.
 
 # Release - Ver 1.3 and 1.3.1
 
