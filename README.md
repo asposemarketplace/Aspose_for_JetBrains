@@ -66,7 +66,7 @@ By following the steps below:
 
 Finally, the downloaded / created example is ready to be evaluated / enhanced as per your usage requirement.
 
-For the complete detail please check the following step by step wiki documentation, [click here](https://bitbucket.org/asposemarketplace/aspose-for-jetbrains/wiki/Aspose%20Example "AsposeExample")
+For the complete detail please check the following step by step wiki documentation, [click here](https://asposejetbrains.codeplex.com/wikipage?title=AsposeExample "AsposeExample")
 
 # How to configure source code of Aspose Project Wizard
 
